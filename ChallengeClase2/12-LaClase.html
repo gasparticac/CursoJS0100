@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaClase</title>
+  </head>
+  <body>
+    <script>
+      var alu;
+      var score;
+      nombre = [];
+      abanderad = [];
+      masBajos = [];
+      notas = [];
+      var i = 0;
+      var j = 0;
+      var aprobados = 0;
+      var prom = 0;
+      var score = 0;
+      var max = 0;
+      var min = 10;
+      var promAp = 0;
+      var promDesap = 0;
+      var cantAprob = 0;
+      var par = 0;
+      var impar = 0;
+      while (alu != "") {
+        alu = prompt("Ingrese nombre del alumno");
+        nombre[i] = alu;
+        if (nombre[i] != "") {
+          score = parseFloat(prompt("Ingrese la nota del alumno"));
+          notas[i] = score;
+          if (score >= 6) {
+            aprobados += 1;
+          }
+          if (score == 10) {
+            prom += 1;
+          }
+          if (score > max) {
+            max = score;
+          }
+          if (score <= min) {
+            min = score;
+          }
+          if (score % 2 == 0) {
+            par += 1;
+          } else if (score % 2 != 0) {
+            impar += 1;
+          }
+        }
+        i++;
+      }
+
+      for (let j = 0; j < i; j++) {
+        if (notas[j] == max) {
+          abanderad.push(nombre[j]);
+        }
+        if (notas[j] == min) {
+          masBajos.push(nombre[j]);
+        }
+        if (notas[j] >= 6) {
+          cantAprob += 1;
+          promAp = promAp + notas[j];
+        } else if (notas[j] < 6) {
+          promDesap = promDesap + notas[j];
+        }
+      }
+      nombre.pop();
+      nombre.sort();
+      document.write(`a. Cantidad de alumnos cargados ${nombre.length} <br>
+        b. Cantidad de alumnos aprobados: ${aprobados} <br>
+        c. Cantidad de alumnos promocionados: ${prom} <br>
+        d. Alumno/s con mayor nota <br> ${abanderad} <br>
+        e. Alumno/s con menor nota, <br> ${masBajos} <br> <br>
+        f. Media de aprobados ${promAp / cantAprob}<br>
+        g. Media de desaprobados ${promDesap / (i - 1 - cantAprob)} <br>
+        h. Ordenar y mostrar los nombres de los alumnos por orden alfabético, <br> ${nombre.join(
+          "<br>"
+        )} <br><br>
+        i. Cantidad de notas pares y cantidad de notas impares. <br>PARES  ${par}<br> IMPARES  ${impar}`);
+    </script>
+  </body>
+</html>

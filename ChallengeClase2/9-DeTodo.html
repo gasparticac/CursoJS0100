@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DeTodo</title>
+  </head>
+  <body>
+    <script>
+      x = parseInt(
+        prompt("ingrese un número para ver su tabla de multiplicar")
+      );
+      let acum = [];
+      for (let i = 1; i < 11; i++) {
+        res = x * i;
+        document.write(`${x} x ${i} = ${x * i}<br>`);
+        acum[i] = res;
+      }
+      var suma = 0;
+      for (let j = 1; j < 10; j++) {
+        document.write(`${acum[j]}+`);
+        suma = suma + acum[j];
+      }
+      document.write(
+        `${acum[acum.length - 1]} = ${suma + acum[acum.length - 1]}`
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      nota1 = parseFloat(prompt("Ingrese la primera nota"));
+      nota2 = parseFloat(prompt("Ingrese la segunda nota"));
+      document.write(`a. Suma total ${nota1 + nota2}. <br>
+        b. Promedio ${(nota1 + nota2) / 2}.<br>`);
+      if (nota1 > nota2) {
+        document.write(`c. La nota máxima es la primera, un ${nota1}.`);
+      } else if (nota2 > nota1) {
+        document.write(`c. La nota máxima es la segunda, un ${nota2}.`);
+      } else {
+        document.write(
+          `c. No hay nota máxima, son iguales (posiblemente se copiaron).`
+        );
+      }
+    </script>
+  </body>
+</html>

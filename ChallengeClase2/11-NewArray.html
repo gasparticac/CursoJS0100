@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NewArray</title>
+  </head>
+  <body>
+    <script>
+      const max = 1000;
+      const min = 1;
+      vector = [];
+      var sumados = 0;
+      document.write("El array inicial <br>");
+      for (let i = 0; i < 5; i++) {
+        vector[i] = Math.floor(Math.random() * (max - min + 1)) + min;
+        document.write(`[${i}] = ${vector[i]}<br>`);
+      }
+      for (let i = 0; i < 2; i++) {
+        sumados = sumados + vector[vector.length - 1];
+        vector.pop();
+      }
+      document.write(`La suma de los últimos 2 valores eliminados es ${sumados}. <br>
+      <br>La cantidad final de filas del vector es ${
+        vector.length
+      }. <br> ${vector.join(" , ")}`);
+    </script>
+  </body>
+</html>

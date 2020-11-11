@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apus</title>
+  </head>
+  <body>
+    <script>
+      nombre = prompt("Ingrese nombre del producto");
+      cantidad = parseInt(prompt("Ingrese cantidad de productos"));
+      precio = parseFloat(prompt("Ingrese precio del producto"));
+      document.write(
+        `Gracias por comprar ${cantidad} unidades de ${nombre}.<br>
+         El total es: ${precio * cantidad}`
+      );
+    </script>
+  </body>
+</html>

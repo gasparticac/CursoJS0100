@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaFabrica</title>
+  </head>
+  <body>
+    <script>
+      const max = 500;
+      const min = 100;
+      var masDe = 0;
+      var minDe = 0;
+      var acum = 0;
+      vector = [];
+      for (let i = 0; i < 5; i++) {
+        vector[i] = Math.floor(Math.random() * (max - min + 1)) + min;
+        document.write(
+          `El sueldo del empleado n° ${i + 1} es de ${vector[i]}.<br>`
+        );
+        acum = acum + vector[i];
+        if (vector[i] > 300) {
+          masDe += 1;
+        } else {
+          minDe += 1;
+        }
+      }
+      document.write(`<br>${minDe} empleados cobran entre $100 y $300.<br>
+      ${masDe} empleados cobran más de $300.<br>
+      Importe total destinado a sueldos: ${acum}.`);
+    </script>
+  </body>
+</html>
