@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const estudiantes = new Array();
+      const CANTMAÑANA = 3;
+      const CANTTARDE = 4;
+      const CANTNOCHE = 2;
+
+      let acum1 = 0,
+        acum2 = 0,
+        acum3 = 0;
+
+      let promedioMañana = 0,
+        promedioTarde = 0,
+        promedioNoche = 0;
+      let turno;
+
+      for (let i = 0; i < CANTMAÑANA + CANTTARDE + CANTNOCHE; i++) {
+        i < CANTMAÑANA
+          ? (turno = "mañana")
+          : i < CANTTARDE + CANTMAÑANA
+          ? (turno = "tarde")
+          : (turno = "noche");
+        let edad = parseFloat(
+          prompt(`Ingrese edad del estudiante del turno ${turno}`)
+        );
+        i < CANTMAÑANA ? estudiantes.push(edad) && (acum1 += edad) : null;
+        i >= CANTMAÑANA && i < CANTMAÑANA + CANTTARDE
+          ? estudiantes.push(edad) && (acum2 += edad)
+          : null;
+        i >= CANTMAÑANA + CANTTARDE
+          ? estudiantes.push(edad) && (acum3 += edad)
+          : null;
+      }
+
+      promedioMañana = acum1 / CANTMAÑANA;
+      promedioTarde = acum2 / CANTTARDE;
+      promedioNoche = acum3 / CANTNOCHE;
+
+      let maximo = Math.max(promedioNoche, promedioTarde, promedioMañana);
+
+      maximo == promedioMañana
+        ? (maximo = "mañana")
+        : maximo == promedioTarde
+        ? (maximo = "tarde")
+        : (maximo = "noche");
+
+      document.write(`Promedio turno mañana ${promedioMañana} <br>
+      Promedio turno tarde ${promedioTarde} <br>
+      Promedio turno noche ${promedioNoche} <br>
+      <hr>El turno con mayor promedio de edades es el turno ${maximo}.`);
+    </script>
+  </body>
+</html>
