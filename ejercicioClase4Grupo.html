@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="ejercicioClase4Grupo.js"></script>
+  </head>
+  <body>
+    <script>
+      const daovuelta = reverseador(prompt("ingrese texto"));
+      document.write(daovuelta);
+      const nombre = cargaNombres(
+        parseInt(prompt("Ingrese cantidad de nombres"))
+      );
+      const notas = cargaNotas(nombre);
+
+      muestraNotas(nombre, notas);
+
+      const elMayor = mayorNota(nombre, notas);
+      document.write(`<br>La mayor nota es del alumno ${elMayor}`);
+
+      const elMenor = menorNota(nombre, notas);
+      document.write(`<br>La menor nota es del alumno ${elMenor}`);
+
+      const promedio = sacaPromedio(notas);
+      document.write(`<br>El promedio total es ${promedio}`);
+    </script>
+  </body>
+</html>
