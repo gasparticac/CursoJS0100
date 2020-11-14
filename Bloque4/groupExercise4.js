@@ -27,7 +27,7 @@ const cargaNotas = (cantNotas) => { //le paso 3
 }
 
 const muestraNotas = (alumnos, notas) =>{
-    document.write(`Libreta de notas<br>`);
+    document.write(`<br>Libreta de notas<br>`);
     for (let i = 0; i < alumnos.length; i++) {
         document.write(`nombre ${alumnos[i]}, nota: ${notas[i]}<br>`);        
     }

@@ -4,12 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <script src="ejercicioClase4Grupo.js"></script>
+    <script src="groupExercise4.js"></script>
   </head>
   <body>
     <script>
-      const daovuelta = reverseador(prompt("ingrese texto"));
-      document.write(daovuelta);
+      const daovuelta = reverseador(prompt("Ingrese texto a dar vuelta"));
+      document.write(`El texto reverse es: <br>${daovuelta.join("")}<br><br>`);
+
       const nombre = cargaNombres(
         parseInt(prompt("Ingrese cantidad de nombres"))
       );
