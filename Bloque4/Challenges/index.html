@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <script>
+      const challengeNumber = parseInt(
+        prompt("Type challenge index number: 1 to 11")
+      );
+      switch (challengeNumber) {
+        default:
+          document.write("Pick a valid one, maquinola.");
+          break;
+
+        case 1:
+          document.write(`The bigger one is: ${getBigger(getThreeNumbers())}`);
+          break;
+
+        case 2:
+          document.write(`The average is: ${getAvg(getThreeNumbers())}`);
+          break;
+
+        case 3:
+          document.write(`The result is: ${add()}`);
+          break;
+
+        case 4:
+          array1 = getArray();
+          alert("1st array ended, now insert elements of array 2.");
+          array2 = getArray();
+          document.write(
+            `The result of array concatenation is: <br>${arrayAddition(
+              array1,
+              array2
+            )}`
+          );
+          break;
+
+        case 5:
+          array3 = getArray();
+          alert("1st array ended, now insert elements of array 2.");
+          array4 = getArray();
+          document.write(
+            `The resulting array with items only in the 1st array: <br>${getUnique(
+              array3,
+              array4
+            )}`
+          );
+          break;
+
+        case 6:
+          document.write(
+            `The resulting array with different items only: <br>${deleteDuplicated(
+              getArray()
+            )}`
+          );
+          break;
+
+        case 7:
+          document.write(
+            `There are ${qChar(getString())} characters in the input text`
+          );
+          break;
+
+        case 8:
+          document.write(
+            `There are ${qWhite(getString())} whitespaces in the input text`
+          );
+          break;
+
+        case 9:
+          document.write(
+            `The new text with capitalized first letters is:<br> ${capitalize(
+              getString()
+            )}`
+          );
+          break;
+
+        case 10:
+          document.write(
+            `The array made from the input text is: <br> ${toArray(
+              getString()
+            )}`
+          );
+          break;
+
+        case 11:
+          const shift = parseInt(
+            prompt("Please insert cypher level (1 to 25)")
+          );
+          document.write(
+            `The new encoded text is: <br>${CaesarShifting(shift, getString())}`
+          );
+          break;
+      }
+    </script>
+  </body>
+</html>
