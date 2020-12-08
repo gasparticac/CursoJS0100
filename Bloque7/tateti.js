@@ -1,7 +1,7 @@
 window.onload = start;
 
-const x = new Array();
-const o = new Array();
+let x = new Array();
+let o = new Array();
 const condicionGanadora = [
   [1, 2, 3],
   [4, 5, 6],
@@ -97,12 +97,12 @@ const checkWinner = (arrx = x, arro = o) => {
       if (lado === "o") {
         cont > 9
           ? (document.getElementById("textoHead").innerHTML =
-              "Es un empate 🤦‍♂️️")
+              "Es un empate 🤦‍♂️️") && limpiar()
           : null;
       } else if (lado === "x") {
         cont == 9
           ? (document.getElementById("textoHead").innerHTML =
-              "Es un empate 🤦‍♂️️")
+              "Es un empate 🤦‍♂️️") && limpiar()
           : null;
       }
     }
@@ -114,6 +114,7 @@ const notifyWinner = (player) => {
   player === lado
     ? (winner.innerText = `¡Ganaste!`)
     : (winner.innerText = `¡Ganó ${player}!`);
+  limpiar();
 };
 
 const fillBlank = () => {
@@ -121,4 +122,23 @@ const fillBlank = () => {
     let elemento = document.getElementById(i);
     elemento.innerHTML === "" ? (elemento.innerHTML = "<h1>-</h1>") : null;
   }
+};
+
+const limpiar = () => {
+  setTimeout(function () {
+    for (i = 1; i < 10; i++) {
+      let elemento = document.getElementById(i);
+      elemento.innerHTML = "";
+      elemento.classList.remove("btn-success");
+      elemento.classList.add("btn-light");
+    }
+    document.getElementById(
+      "hintText"
+    ).innerHTML = `Por las dudas... sos la ${lado}`;
+    document.getElementById("textoHead").innerHTML = "A jugar!🎉️";
+    x = [];
+    o = [];
+  }, 5000);
+  active = true;
+  lado === "x" ? (cont = 0) : (cont = 1);
 };
