@@ -1,0 +1,18 @@
+.customCard:hover {
+  cursor: pointer;
+  border: 2px solid rgba(46, 173, 0, 0.47);
+}
+
+.customImg {
+  max-height: 50vh;
+}
+
+.customRow {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 14px;
+  background: #e0e0e0;
+}
+
+h1 {
+  background: #ffb74d;
+}
