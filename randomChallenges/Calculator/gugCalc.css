@@ -1,0 +1,37 @@
+.boton,
+.boton-azul,
+.boton-blanco {
+  margin: auto;
+  width: 90%;
+  margin: 4px;
+}
+
+.boton {
+  background: #dadce0;
+  border: 1px solid #dadce0;
+  border-radius: 4px;
+}
+
+.boton-azul {
+  background: #f1f3f4;
+  border: 1px solid #f1f3f4;
+  border-radius: 4px;
+}
+
+input {
+  text-align: right;
+  font-weight: bold;
+}
+
+.color {
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: 1px solid darkgray;
+}
+
+.textBottom {
+  position: absolute;
+  margin: auto;
+  bottom: 0px;
+}
