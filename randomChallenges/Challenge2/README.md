@@ -19,19 +19,19 @@ Los datos del pasaporte se validan en archivos por lotes (su entrada de rompecab
 
 A continuación, se muestra un archivo por lotes de ejemplo que contiene cuatro pasaportes:
 
-ecl: gry pid: 860033327 eyr: 2020 hcl: #FFFFFD
-byr: 1937 iyr: 2017 cid: 147 hgt: 183cm
+    ecl: gry pid: 860033327 eyr: 2020 hcl: #FFFFFD
+    byr: 1937 iyr: 2017 cid: 147 hgt: 183cm
 
-iyr: 2013 ecl: amb cid: 350 eyr: 2023 pid: 028048884
-hcl: # cfa07d byr: 1929
+    iyr: 2013 ecl: amb cid: 350 eyr: 2023 pid: 028048884
+    hcl: # cfa07d byr: 1929
 
-hcl: # ae17e1 iyr: 2013
-eyr: 2024
-ecl: brn pid: 760753108 byr: 1931
-altura: 179cm
+    hcl: # ae17e1 iyr: 2013
+    eyr: 2024
+    ecl: brn pid: 760753108 byr: 1931
+    altura: 179cm
 
-hcl: # cfa07d eyr: 2025 pid: 166559648
-iyr: 2011 ecl: brn hgt: 59in
+    hcl: # cfa07d eyr: 2025 pid: 166559648
+    iyr: 2011 ecl: brn hgt: 59in
 
 El primer pasaporte es válido: los ocho campos están presentes. El segundo pasaporte no es válido; le falta hgt (el campo Altura).
 
